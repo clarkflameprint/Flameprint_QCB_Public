@@ -1,0 +1,41 @@
+/* src/styles/global.css */
+
+/* 🌌 ClarkSans_121 + system fallback */
+
+/* global.css */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7854F6; /* Sagittarius purple */
+  font-family: 'ClarkSans_121', sans-serif;
+}
+
+@font-face {
+  font-family: 'ClarkSans_121';
+  src: url('/fonts/ClarkSans_121.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --sagittarius-purple: #7854F6;
+  --midnight-black: #000000;
+  --white-star: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--midnight-black);
+  font-family: 'ClarkSans_121', ui-sans-serif, system-ui, sans-serif;
+  color: var(--white-star);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+

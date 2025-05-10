@@ -1,0 +1,62 @@
+
+/* src/styles/EngineToggle.css */
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.toggle-label {
+  font-family: 'ClarkSans_121', ui-sans-serif, system-ui;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7854F6; /* Sagittarius Purple */
+  transition: color 0.3s ease;
+}
+
+.toggle-label-left {
+  margin-right: 0.25rem;
+}
+
+.toggle-label-right {
+  margin-left: 0.25rem;
+}
+
+.toggle-switch {
+  width: 42px;
+  height: 24px;
+  background-color: #333;
+  border-radius: 9999px;
+  position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #7854F6;
+}
+
+.toggle-switch::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 9999px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-switch.on {
+  background-color: #7854F6;
+  box-shadow: 0 0 6px #a991fc, 0 0 10px #7854F6;
+}
+
+.toggle-switch.on::before {
+  transform: translateX(18px);
+}
+
+.toggle-switch.hovered {
+  box-shadow: 0 0 10px #a991fc, 0 0 15px #7854F6;
+}
+
