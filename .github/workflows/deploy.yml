@@ -1,0 +1,26 @@
+name: 🔥 Auto Deploy to SiteGround via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy:
+    name: Deploy Website via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Upload via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: gvam1257.siteground.biz
+        username: intellij@fireprint.ai
+        password: ${{ secrets.SITEGROUND_FTP_PASSWORD }}
+        server-dir: /
+        local-dir: ./ai-qcb-ui/public
+        dangerous-clean-slate: false
+
