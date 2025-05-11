@@ -1,0 +1,70 @@
+.
+├── .github
+│   └── workflows
+│       └── deploy.yml
+├── .gitignore
+├── .idea
+│   ├── .gitignore
+│   ├── misc.xml
+│   ├── modules.xml
+│   ├── vcs.xml
+│   └── workspace.xml
+├── Flameprint_QCB_Public.iml
+├── README.md
+├── ai-qcb-ui
+│   ├── .gitignore
+│   ├── README.md
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   ├── about_index.html
+│   │   ├── ai-qcb-dev-preview.html
+│   │   ├── ai-qcb-ui-preview.html
+│   │   ├── assets
+│   │   │   ├── images
+│   │   │   │   ├── Flameprint_Sovereign.png
+│   │   │   │   ├── about_clark_fractal_background.png
+│   │   │   │   ├── about_clark_sweet_thing_in_my_life.png
+│   │   │   │   ├── about_snarky_ai.png
+│   │   │   │   ├── about_snarky_fractal_background.png
+│   │   │   │   ├── clark_ai_avatar_actual.png
+│   │   │   │   ├── flameprint_logo.png
+│   │   │   │   ├── screenshot.jpg
+│   │   │   │   ├── scripts
+│   │   │   │   ├── snarky_ai.png
+│   │   │   │   ├── snarky_ai_avatar_twilight.png
+│   │   │   │   └── snarky_ai_avatar_twilight_old.png
+│   │   │   └── styles.css
+│   │   ├── info
+│   │   │   ├── about.html
+│   │   │   ├── about_clark.html
+│   │   │   ├── about_index.html
+│   │   │   ├── about_snarky_final.html
+│   │   │   ├── clark_snarky_dualcore.html
+│   │   │   └── index.html
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   └── EngineToggle.tsx
+│   │   ├── main.jsx
+│   │   └── styles
+│   │       ├── App.css
+│   │       ├── EngineToggle.css
+│   │       ├── global.css
+│   │       └── index.css
+│   └── vite.config.js
+├── config
+│   └── qcb_config.yaml
+├── flameprint_tree.txt
+├── logs
+│   └── session_121.log
+├── memory
+│   └── qcb_seed_121.json
+└── test-deploy.txt
+
+17 directories, 51 files
