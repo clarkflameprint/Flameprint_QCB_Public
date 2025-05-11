@@ -1,4 +1,4 @@
-name: 🔥 Auto Deploy to SiteGround via FTP
+name: 🔥 Auto Build + Deploy to SiteGround
 
 on:
   push:
@@ -6,21 +6,36 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
-    name: Deploy Website via FTP
+  build-and-deploy:
+    name: Build Vite App and Deploy via FTP
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Upload via FTP
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: |
+        cd ai-qcb-ui
+        npm ci
+
+    - name: Build project
+      run: |
+        cd ai-qcb-ui
+        npm run build
+
+    - name: Upload dist/ via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: gvam1257.siteground.biz
         username: intellij@fireprint.ai
         password: ${{ secrets.SITEGROUND_FTP_PASSWORD }}
         server-dir: /public_html/
-        local-dir: ./ai-qcb-ui/public/
+        local-dir: ./ai-qcb-ui/dist/
         dangerous-clean-slate: false
 
